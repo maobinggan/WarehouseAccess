@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+	    <action name="login" class="com.hy.controller.LoginAction" method="login">
+	    	<result name="success">/homepage/homepage2.jsp</result>
+	    	<result name="failure">/login/failure_login.jsp</result>
+	    </action>
+	    
+	    <action name="load" class="com.hy.controller.LoadWarehouseAction" method="loading">
+	    	<result name="success">/warehouse/showRukujilu.jsp</result>
+	    </action>
+	   	<action name="out" class="com.hy.controller.OutWarehouseAction" method="outing">
+	    	<result name="success">/warehouse/showChukujilu.jsp</result>
+	    	<result name="failure">/warehouse/failure_out.jsp</result>
+	    </action>
+	    <action name="addingYuangong" class="com.hy.controller.AddingYuangong" method="addingYuangong">
+	    	<result name="success">/warehouse/showYuangong.jsp</result>
+	    	<result name="failure">/warehouse/failure_addYuangong.jsp</result>
+	    </action>
+	    
+	    
+	    
+	    
+	    
+    </package>
+    <include file="example.xml"/>
+</struts>
